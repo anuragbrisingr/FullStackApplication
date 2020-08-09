@@ -54,6 +54,10 @@
     <Compile Include="DBModels\FullStackDBModel.cs" />
     <Compile Include="DBModels\OrderTable.cs" />
     <Compile Include="DBModels\ProductTable.cs" />
+    <Compile Include="GenericRepositoryClasses\GenericRepository.cs" />
+    <Compile Include="GenericRepositoryClasses\UnitOfWork.cs" />
+    <Compile Include="GenericRepositoryInterfaces\IGenericRepository.cs" />
+    <Compile Include="GenericRepositoryInterfaces\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

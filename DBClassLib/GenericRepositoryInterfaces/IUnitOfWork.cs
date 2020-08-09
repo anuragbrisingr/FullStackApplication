@@ -1,6 +1,8 @@
-﻿namespace DBClassLib.GenericRepositoryInterfaces
+﻿using System;
+
+namespace DBClassLib.GenericRepositoryInterfaces
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         // Implementing Repository declarations as Properties should go here.
 
