@@ -14,7 +14,7 @@ namespace DBClassLib.GenericRepositoryClasses
         private FullStackDBModel _databaseContext;
         private DbSet<TEntity> _dbSet;
 
-        protected GenericRepository(FullStackDBModel context)
+        public GenericRepository(FullStackDBModel context)
         {
             this._databaseContext = context;
             this._dbSet = context.Set<TEntity>();

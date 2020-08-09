@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBClassLib.GenericRepositoryClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,12 @@ namespace Project1.Controllers
 {
     public class HomeController : Controller
     {
+        UnitOfWork unitOfWork = new UnitOfWork();
         public ActionResult Index()
         {
-            return View();
+            var model = unitOfWork.ProductRepository.ReadRecords();
+
+            return View(model.ToList());
         }
 
         public ActionResult About()

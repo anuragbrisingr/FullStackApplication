@@ -11,6 +11,13 @@ namespace DBClassLib.GenericRepositoryClasses
         private bool disposed = false;
         private string _errorMessage;
 
+        private IGenericRepository<ProductTable> _productRepository;
+
+        public IGenericRepository<ProductTable> ProductRepository { get {
+                return _productRepository ?? (_productRepository = new GenericRepository<ProductTable>(context));
+            }
+        }
+
         public virtual void Complete()
         {
             try 
