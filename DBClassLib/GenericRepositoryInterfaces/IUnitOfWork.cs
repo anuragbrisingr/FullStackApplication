@@ -7,6 +7,8 @@ namespace DBClassLib.GenericRepositoryInterfaces
     {
         // Implementing Repository declarations as Properties should go here.
         IGenericRepository<ProductTable> ProductRepository { get; }
+        IGenericRepository<OrderTable> OrderRepository { get; }
+        IGenericRepository<CustomerTable> CustomerRepository { get; }
 
         void Complete();
     }

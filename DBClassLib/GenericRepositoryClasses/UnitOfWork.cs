@@ -12,10 +12,22 @@ namespace DBClassLib.GenericRepositoryClasses
         private string _errorMessage;
 
         private IGenericRepository<ProductTable> _productRepository;
+        private IGenericRepository<OrderTable> _orderRepository;
+        private IGenericRepository<CustomerTable> _customerRepository;
 
         public IGenericRepository<ProductTable> ProductRepository { get {
                 return _productRepository ?? (_productRepository = new GenericRepository<ProductTable>(context));
             }
+        }
+
+        public IGenericRepository<OrderTable> OrderRepository { get {
+                return _orderRepository ?? (_orderRepository = new GenericRepository<OrderTable>(context));
+            } 
+        }
+
+        public IGenericRepository<CustomerTable> CustomerRepository { get {
+                return _customerRepository ?? (_customerRepository = new GenericRepository<CustomerTable>(context));
+            } 
         }
 
         public virtual void Complete()
