@@ -1,14 +1,14 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace DBClassLib.DBModels
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
-
     [Table("CustomerTable")]
     public partial class CustomerTable
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public Guid ID { get; set; }
 
         [Required]
@@ -22,6 +22,7 @@ namespace DBClassLib.DBModels
         [StringLength(256)]
         public string CustomerAddress { get; set; }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? DateInserted { get; set; }
 
         public Guid? OrderID { get; set; }
