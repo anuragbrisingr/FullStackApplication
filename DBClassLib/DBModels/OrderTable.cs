@@ -14,7 +14,6 @@ namespace DBClassLib.DBModels
             CustomerTables = new HashSet<CustomerTable>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public Guid ID { get; set; }
 
